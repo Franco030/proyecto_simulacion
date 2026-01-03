@@ -4,7 +4,7 @@ Este proyecto es una aplicación de escritorio completa, desarrollada en Python,
 
 Incluye dashboards detallados tanto para el usuario como para un administrador, aprovechando al máximo los datos recopilados de cada intento.
 
-## ✨ Características Principales
+## Características Principales
 
   * **Doble Modo de Simulación:**
       * **Práctica:** Un examen de 20 preguntas seleccionadas *totalmente al azar* del banco de 80.
@@ -37,7 +37,7 @@ Incluye dashboards detallados tanto para el usuario como para un administrador, 
 
 -----
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
   * **Lenguaje:** Python 3.x
   * **Interfaz Gráfica (UI):** PyQt5
@@ -50,7 +50,7 @@ Incluye dashboards detallados tanto para el usuario como para un administrador, 
 
 -----
 
-## 🚀 Instalación y Puesta en Marcha
+## Instalación y Puesta en Marcha
 
 Sigue estos pasos para ejecutar el proyecto en un entorno de desarrollo.
 
@@ -116,23 +116,23 @@ Puedes iniciar sesión con:
 
 -----
 
-## 🧠 Arquitectura de la Solución (MVC)
+## Arquitectura de la Solución (MVC)
 
 El proyecto está estrictamente separado en tres módulos (carpetas) que representan el patrón **Modelo-Vista-Controlador**.
 
-### 🏛️ Modelo (`model/`)
+### Modelo (`model/`)
 
   * **Qué es:** Es la capa de datos. Define la *estructura* de nuestra información.
   * **Archivos Clave:** `database.py` (configura el motor y la sesión de SQLAlchemy) y `models.py` (define las clases `User`, `Question`, `TestAttempt`, etc.).
   * **Responsabilidad:** Interactuar con la base de datos. No sabe nada de la interfaz gráfica ni de las reglas de negocio. Solo sabe cómo guardar y recuperar datos.
 
-### 🖼️ Vista (`view/`)
+### Vista (`view/`)
 
   * **Qué es:** Es la capa de presentación (la UI). Es "pasiva" o "tonta".
   * **Archivos Clave:** `login_window.py`, `test_window.py`, `admin_dashboard_window.py`, etc.
   * **Responsabilidad:** Mostrar widgets (botones, tablas, gráficos) al usuario y emitir "señales" (como `login_button.clicked`) cuando el usuario interactúa. *No toma decisiones*.
 
-### 🧠 Controlador (`controller/`)
+### Controlador (`controller/`)
 
   * **Qué es:** Es el "cerebro" de la aplicación. Actúa como el intermediario que une el Modelo y la Vista.
   * **Archivos Clave:**
@@ -140,7 +140,7 @@ El proyecto está estrictamente separado en tres módulos (carpetas) que represe
       * `test_controller.py`: El cerebro principal. Maneja la lógica de iniciar exámenes, seleccionar preguntas, calificar respuestas y recopilar datos para los dashboards.
       * `app_controller.py`: El "Orquestador". Es el único controlador que habla directamente con las ventanas de la Vista.
 
-### 🔗 ¿Cómo se Conectan los Módulos? (Flujo de Ejemplo)
+### ¿Cómo se Conectan los Módulos? (Flujo de Ejemplo)
 
 Tomemos como ejemplo el **Login del Admin** y la apertura de su dashboard:
 
@@ -161,7 +161,7 @@ Tomemos como ejemplo el **Login del Admin** y la apertura de su dashboard:
 
 -----
 
-## 💾 Modelo de Base de Datos
+## Modelo de Base de Datos
 
 El modelo de datos fue diseñado para ser normalizado y capturar cada pieza de información relevante para un análisis detallado.
 
@@ -175,7 +175,7 @@ El modelo de datos fue diseñado para ser normalizado y capturar cada pieza de i
 
 -----
 
-## 🚧 Retos de Desarrollo y Soluciones
+## Retos de Desarrollo y Soluciones
 
 Durante el desarrollo, surgieron varios retos complejos que requirieron soluciones específicas.
 
